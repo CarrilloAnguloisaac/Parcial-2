@@ -1,0 +1,29 @@
+# -*- codificación: utf-8 -*-
+"""Sin título0.ipynb
+Generado automáticamente por Colaboratorio.
+El archivo original se encuentra en
+    https://colab.research.google.com/drive/1lKz3iFj9Kaf4j4ez6FzUjxFrjZNABQJZ
+"""
+
+ instalar  pip rdflib
+
+de  rdflib  importar  gráfico , espacio de nombres , literal
+de  rdflib . importación de espacio de nombres  RDF , RDFS 
+
+# Crea un gráfico RDF
+g  =  Gráfico ()
+
+# Define un espacio de nombres para nuestra ontología
+ontologia  =  Espacio de nombres ( "http://www.ejemplo.com/ontologia#" )
+
+# Definir clases y propiedades
+gramo . agregar (( ontología . Persona , RDF . tipo , RDFS . Clase ))
+gramo . agregar (( ontología . tieneEdad , RDF . tipo , RDF . Propiedad ))
+
+# Agrega instancias y relaciones
+gramo . agregar (( ontología . Juan , RDF . tipo , ontología . Persona ))
+gramo . agregar (( ontología . Juan , ontología . tieneEdad , Literal ( 30 )))
+
+#Consulta la ontología
+para  sujeto , pred , obj  en  g :
+    print ( f"Sujeto: { subj } , Predicado: { pred } , Objeto: { obj } " )
